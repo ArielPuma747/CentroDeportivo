@@ -21,6 +21,10 @@ app.controller('controladorPrincipal', ['$rootScope', '$scope', 'sesionesControl
 
 }]);
 
+app.controller('controladorRaquet', ['$rootScope', '$scope', 'sesionesControl', 'mensajesFlash' , function($rootScope,$scope, sesionesControl, mensajesFlash){
+
+}]);
+
 // controlador para la navegacion
 app.controller('menuControlador', ['$scope', '$location','sesionesControl', function ($scope, $location, sesionesControl) {  
   $scope.navClass = function (page, isParent) {    

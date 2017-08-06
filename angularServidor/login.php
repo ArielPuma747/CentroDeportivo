@@ -10,6 +10,26 @@ if($_POST['usuario'] == "conchi"){
 	echo "}";
 	echo "}";
 
+} elseif($_POST['usuario'] == "raquet"){
+
+	echo "{";
+	echo "\"login\": true,";
+	echo "\"usuario\": {";
+	echo "\"nombre\": \"Conchi\",";
+	echo "\"color\": \"Rojo\"";
+	echo "}";
+	echo "}";
+
+} elseif($_POST['usuario'] == "recepcion"){
+
+	echo "{";
+	echo "\"login\": true,";
+	echo "\"usuario\": {";
+	echo "\"nombre\": \"Conchi\",";
+	echo "\"color\": \"Rojo\"";
+	echo "}";
+	echo "}";
+
 } else {
 	header('x', true, 400);
 

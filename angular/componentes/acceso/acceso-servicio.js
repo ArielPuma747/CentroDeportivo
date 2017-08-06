@@ -5,38 +5,44 @@ app.factory("accesoServicio", ['$http', '$location', 'sesionesControl', 'mensaje
         var usuario ={
           nombre: datos.usuario.nombre,
           color: datos.usuario.color
-        };
-        sesionesControl.setList("usuario",usuario);
-    }
-    var unCacheSession = function(){
-        sesionesControl.unset("usuarioLogin");
-        sesionesControl.unset("usuario");
-    }
+      };
+      sesionesControl.setList("usuario",usuario);
+  }
+  var unCacheSession = function(){
+    sesionesControl.unset("usuarioLogin");
+    sesionesControl.unset("usuario");
+}
 
-    return{
-        login : function(usuario){
-            var passwordEnc = "" + CryptoJS.SHA512(usuario.password);
-            return $http({
-                url: urls.servidor + 'login.php',
-                method: "POST",
-                data:  $.param({usuario:usuario.email, password:passwordEnc}),
-                headers: {'Content-Type': 'application/x-www-form-urlencoded'}
-            }).success(function(data){
-                mensajesFlash.clear();
-                cacheSession(data);
-                sesionesControl.unset("mensaje");
+return{
+    login : function(usuario){
+        var passwordEnc = "" + CryptoJS.SHA512(usuario.password);
+        return $http({
+            url: urls.servidor + 'login.php',
+            method: "POST",
+            data:  $.param({usuario:usuario.email, password:passwordEnc}),
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        }).success(function(data){
+            mensajesFlash.clear();
+            cacheSession(data);
+            sesionesControl.unset("mensaje");
+            if (usuario.email == "raquet") {
+                $location.path('/raquet');    
+            } else if (usuario.email == "recepcion") {
+                $location.path('/registroCliente');
+            }else{
                 $location.path('/listado');
-            }).error(function(data,status){
-                if(status==400){
-                    mensajesFlash.show(data.mensaje,"danger");
-                }
-            })
-        },
-        logout : function()
-        {
-            sesionesControl.clear();
-            sesionesControl.setList("mensaje", {texto:"¡Hasta pronto!", tipo:"success"});
-            $location.path("/login");
-        }
+            }
+        }).error(function(data,status){
+            if(status==400){
+                mensajesFlash.show(data.mensaje,"danger");
+            }
+        })
+    },
+    logout : function()
+    {
+        sesionesControl.clear();
+        sesionesControl.setList("mensaje", {texto:"¡Hasta pronto!", tipo:"success"});
+        $location.path("/login");
     }
+}
 }]); 
