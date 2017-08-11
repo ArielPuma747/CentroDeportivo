@@ -1,0 +1,82 @@
+<div class="container">
+	<fieldset>
+    <br>
+    <br>
+    <br>
+    <form class="contact_form">
+        <ul>
+            <li>
+                <h1>Registro/Busqueda Clientes</h1>
+            </li>
+            <li>
+                <label for="Nit/Ci">Nit/Ci:</label>
+                <input type="number" placeholder="123.." required />
+            </li>
+            <br>
+            <li>
+                <label for="Nombre">NombreCliente:</label>
+                <input type="text"  placeholder="Nombre" required />
+            </li>
+            <br>
+            <li>
+                <label for="Apellido">ApellidoCliente:</label>
+                <input type="text"  placeholder="Apellido" required />
+            </li>
+            <br>
+            <li>
+                <label for="Mayores">Mayores:</label>
+                <input type="number"  placeholder="Cantidad Mayores" required />
+            </li>
+            <br>
+            <li>
+                <label for="Niños">Niños:</label>
+                <input type="number"  placeholder="Cantidad Niños" required />
+            </li>
+        </ul>
+    </form>
+</fieldset>
+</div>
+<div class="container">
+	<h2>Casilleros</h2>
+	<hr>
+	<br>
+	<div class="container">
+		<table>
+			<td>
+				<tr>
+					<label name="cantidadCasillero">cantidad</label>
+					<input type="number" name="cantidadCasilleroInput">
+				</tr>
+				<tr>
+					<label name="disponibleCasillero">Disponible</label>
+					<input type="text" name="disponibleCasilleroInput" readonly="true" value="15/45">
+				</tr>
+			</td>
+		</table>
+	</div>
+	<br>
+	<br>
+
+	<button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">Asignar Casillero</button>
+
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Llave Casillero</h4>
+				</div>
+				<div class="modal-body">
+					<h1>12J</h1>
+					<h1>15A</h1>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">ACEPTAR</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</div>
