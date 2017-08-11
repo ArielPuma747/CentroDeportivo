@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>cobrar</title>
+	<meta http-equiv="X-UA-Compatible" content="IE-edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h2>CONSUMO</h2>
+		<hr>
+		<br>
+		<div class="container">
+			<label name="nit_ci">NIT/CI</label>
+			<input type="text" name="nit_ciInput">
+			<button class="btn btn-info">BUSCAR</button>
+			<div class="row">
+				<h3>CONSUMO TOTAL</h3>
+				<br>
+				<table style="width:100%; border: 1px solid black ">
+					<thead>
+						<tr>
+							<th>ITEM</th>
+							<th>PRECIO</th>
+						</tr>
+					</thead>
+				</table>
+				<br>
+				<br>
+				<div class="col-sm-4">
+					<label name="totalConsumo">TOTAL: </label>
+					<input type="text" name="totalConsumoInput" readonly="true">
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
