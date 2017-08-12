@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+.container {
+    position: relative;
+    width: 50%;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 35%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.container:hover .thumbnail {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+.thumbnail {
+    background-color: black;
+    width: 200px;
+    height: 160px;
+    display: inline-block; /* makes it fit in like an <img> */
+    background-size: cover; /* cover or contain */
+    background-position: center center;
+    background-repeat: no-repeat;
+    display*:inline;
+
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+</style>
+</head>
+<body>
+
+<table border="0" width="350" cellpadding="5" style="margin-top:10px; margin-left: 215px;" >
+
+<tbody>
+<tr>
+
+  <td align="center" valign="center">
+    <div class="container" >
+      <div class=thumbnail style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3pFRWF2dKvmCFnBsGGjwQEVIhXs-do9wXlJVHjpktTbDPYznvGA);">
+        <div class="middle">
+          <div class="text">pop-up window here</div>
+        </div>
+      </div>
+    Caption text centered under the first image.
+    </div>
+  </td>
+  
+
+    <td align="center" valign="center">
+      <div class="container">
+        <div class=thumbnail style="background-image: url(https://www.shopmarriott.com/images/products/v2/xlrg/Marriott-towel-set-MAR-310-SET_xlrg.jpg);">
+        <div class="middle">
+          <div class="text">pop-up window here</div>
+        </div>
+      </div>
+      Caption text centered under the image.
+      </div>
+    </td>
+
+    <td align="center" valign="center">
+      <div class="container">
+        <div class=thumbnail style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWDDqf90n6fpBXJ_wHHmlxSr2INSvcSjnV88tz2KG2LeGno_L_);">
+        <div class="middle">
+          <div class="text">pop-up window here</div>
+        </div>
+      </div>
+      Caption text centered under the image.
+      </div>
+    </td>
+</tr>
+
+<tr>
+     <td align="center" valign="center">
+      <div class="container">
+        <div class=thumbnail style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBqJCGMrE20DHJqaU6mnO8RQQgAKfM6CZM6HdpxSflwrwOGLhN);">
+        <div class="middle">
+          <div class="text">pop-up window here</div>
+        </div>
+      </div>
+      Caption text centered under the image.
+      </div>
+    </td>
+
+  <td align="center" valign="center">
+      <div class="container">
+        <div class=thumbnail style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYiOvd46yCL8gqJ1ZuKXqdC2ZS-NMqPHc37kszpWAzpBr_00aoUw);">
+        <div class="middle">
+          <div class="text">pop-up window here</div>
+        </div>
+      </div>
+      Caption text centered under the image.
+      </div>
+    </td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>
