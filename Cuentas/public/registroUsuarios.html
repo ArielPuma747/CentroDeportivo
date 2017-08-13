@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Formulario Registro de Usuarios</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+</head>
+<body>
+<form>
+<center>
+<form class="contact_form" action="#" method="post">
+<meta charset="UTF-8">
+    <ul>
+        <li>
+        <h1>Formulario Registro de Usuarios</h1>
+        </li>
+        
+        <li>
+            <label for="Nombre">Nombre(s): </label>
+            <input ng-model="usuario.nombre" type="text"  placeholder="Nombre" required />
+        </li>
+
+        <li>
+            <label for="Apellido">Apellido(s):</label>
+            <input ng-model="usuario.apellido" type="text"  placeholder="Apellido" required />
+        </li>
+
+        <li>
+            <label for="CedulaIdentidad">CedulaDeIdentidad:</label>
+            <input ng-model="usuario.cedula" type="number"  placeholder="123..." required />
+        </li>
+
+        <li>
+            <label for="FechaDeNacimiento">FechaDeNacimiento:</label>
+            <input ng-model="usuario.fechaNacimiento" type="date" required />
+        </li>
+
+
+        <li>
+            <label for="Celular">Celular:</label>
+            <input ng-model="usuario.celular" type="number"  placeholder="7000000" required />
+        </li>
+
+        <li>
+            <label for="Telefono">TelefonoFijo:</label>
+            <input ng-model="usuario.fijo"t ype="number"  placeholder="4000000"/>
+        </li>
+
+        <li>
+            <label for="Correo">Correo:</label>
+            <input ng-model="usuario.correo" type="text"  placeholder="ejemplo@xmail.com" required />
+        </li>
+
+        <li>
+            <label for="Contraseña">Contraseña:</label>
+            <input ng-model="usuario.contraseña" type="password"  placeholder="IngreseContraseña" required />
+        </li>
+         <li>
+         
+            <label for="ConfirmarContraseña">ConfirmeSuContraseña:</label>
+            <input ng-model="usuario.contraseñaConfirmada" type="password"  placeholder="IngreseContraseña" required />
+            
+        </li>
+
+        <button ng-click="" class="submit" type="submit">Crear Cuenta</button>
+        </li>
+    </ul>
+    </center>
+</form>
+</body>
+</html>
