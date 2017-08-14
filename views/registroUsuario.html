@@ -1,0 +1,28 @@
+<div ng-controller="registroController">  
+    <div class="container"> 
+    <!--Cabecera-->
+        <div class="jumbotron text-center">
+            <h1>REGISTRO DE USUARIO </h1>
+        </div>           
+         <div id="client-form" class="row">
+            <div class="col-sm-8 col-sm-offset-2 text-center">
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control input-lg text-center" placeholder="Nomrbe" ng-model="usuario.nombre">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control input-lg text-center" placeholder="Apellido" ng-model="usuario.apellido">
+                    </div>
+                     <div class="form-group">
+                        <input type="text" class="form-control input-lg text-center" placeholder="Carnet" ng-model="usuario.carnet">
+                    </div>
+                    <button class="btn btn-primary btn-lg" ng-click="createClient()">Añadir</button>
+                </form>
+            </div>
+        </div>
+        <div class="container">
+            <span class="label label-info">{{ usuarios.length }}</span>
+        </div>
+        <!--validar usuario-->
+    </div>
+</div>  
