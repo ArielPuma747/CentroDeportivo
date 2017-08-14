@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+	<fieldset>
+    <br>
+    <br>
+    <br>
+    <form class="contact_form">
+        <ul>
+            <li>
+                <h1>Registro/Busqueda Clientes</h1>
+            </li>
+            <div class="col-xs-4">
+            <li>
+                <label for="Nit/Ci">Nit/Ci:</label>
+                <input type="number" class="form-control" class="col-xs-3" id = "number" placeholder="123.." required />
+                </div>
+
+            </li>
+            <br>
+            <li>
+            <div class="col-xs-4">
+                <label for="Nombre">NombreCliente:</label>
+                <input ng-model="Cliente.nombre" type ="text" class="form-control" id="inputClienteN" placeholder="Nombre" required />
+                </div>
+            </li>
+            <br>
+            <li>
+            <div class="col-xs-4">
+                <label for="Apellido">ApellidoCliente:</label>
+                <input type="text" class="form-control"  placeholder="Apellido" required />
+                </div>
+            </li>
+            <br>
+            <li>
+            <div class="col-xs-4">
+                <label for="Mayores">Mayores:</label>
+                <input type="number" class="form-control" placeholder="Cantidad Mayores" required />
+                </div>
+            </li>
+            <br>
+            <li>
+            <div class="col-xs-4">
+                <label for="Niños">Niños:</label>
+                <input type="number" class="form-control" placeholder="Cantidad Niños" required />
+                </div> 
+            </li>
+        </ul>
+    </form>
+</fieldset>
+</div>
+</body>
+<div class="container">
+	<h2>Casilleros</h2>
+	<hr>
+	<br>
+	<div class="container">
+		<table>
+			<td>
+				<tr>
+				    <div class="col-xs-1">
+					<label name="cantidadCasillero">cantidad</label>
+					<input type="number" class="form-control" name="cantidadCasilleroInput">
+					</div>
+				</tr>
+				<tr>
+				    <div class="col-xs-2">
+					<label name="disponibleCasillero">Disponible</label>
+					<input type="text" class="form-control" name="disponibleCasilleroInput" readonly="true" value="15/45">
+					</div>
+				</tr>
+			</td>
+		</table>
+	</div>
+	<br>
+	<br>
+
+	<button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">Asignar Casillero</button>
+	<button ng-click="asignar()">prueba</button>
+
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Llave Casillero</h4>
+				</div>
+				<div class="modal-body">
+					<h1>12J</h1>
+					<h1>15A</h1>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">ACEPTAR</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</div>
+</body>
